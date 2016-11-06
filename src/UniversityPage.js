@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, Match } from 'react-router'
+import { Link, Match, Redirect } from 'react-router'
 import mapausp1 from './mapausp1.jpg'
 import circulares from './circulares.jpg'
 import cardapiosusp from './cardapiosusp.jpg'
@@ -12,9 +12,6 @@ import bandex from './bandex.jpg'
 
 const Campus = () => (
   <div>
-    <h4>CAMPUS</h4>
-
-
    <p> O Campus se localiza na Zona Oeste da Cidade de São Paulo no bairro Butantã e tem 3 entradas principais, chamadas comumente de P1, P2 e P3:</p>
    <img src={mapausp1} className="img-fluid"/>
    <dl className="row">
@@ -34,8 +31,6 @@ const Campus = () => (
 
 const Transporte = () => (
   <div>
-    <h4>TRANSPORTE</h4>
-
     <p>A USP conta com duas principais linhas de ônibus chamadas de Circulares. Os circulares, como o nome sugere, circula a USP passando por seus principais pontos e pela Estação Butantã do Metrô.</p>
     <img src={circulares} className="img-fluid"/>
     <p>A USP também possui uma entrada prática para aqueles que usam a Linha 9 - Esmeralda da CPTM. A entrada apelidada de PTrem desemboca em um ponto de ônibus por onde os Circulares passam.</p>
@@ -47,8 +42,6 @@ const Transporte = () => (
 
 const Alimentacao = () => (
   <div>
-    <h4>ALIMENTACAO</h4>
-
     <p>Alunos e Funcionários da USP têm direito a três refeições por dia nos Bandejões. Bandejão é o nome dado aos Restaurantes da USP. Esses são restaurantes subsidiados onde os alunos podem almoçar ou jantar por apenas R$1,90 e tomar café da manhã por R$0,60.</p>
 	  <p>O Bandejão oferece uma refeição balanceada e com opção vegetariana. São 4 restaurantes no total: Central, das Químicas, da Física e da Prefeitura (PUSP-C). Todos eles são acessados pelo Cartão USP, mas para ter saldo no cartão, deve ser colocado no caixa do COSEAS próximo ao Bandejão Central.</p>
 	  <p>Os cardápios podem ser acessados pelo website do COSEAS-USP <a target="_blank" href="http://www.usp.br/coseas/COSEASHP/COSEAS2010_cardapio.html">aqui</a>.</p>
@@ -59,8 +52,6 @@ const Alimentacao = () => (
 
 const Aplicativos = () => (
   <div>
-    <h4>APLICATIVOS</h4>
-
     <p>Alguns apps já foram criados para guiar os alunos com alguns pontos, como rota de circulares, cardápio dos bandejões e até as filas do Bandejão</p>
     
     <h5>Aplicativos da Universidade</h5>
@@ -95,7 +86,6 @@ const UniversityPage = (props) => (
   <div className="row pt-1">
     {/* MENU DA UNIVERSIDADE */}
     <div className="col-md-3">
-      <h5><b>Páginas Principais</b></h5>
       <ul className="nav nav-stacked nav-pills">
         <li className="nav-item">
           <Link className="nav-link" activeClassName="active" to="/universidade/campus">O Campus</Link>
@@ -113,6 +103,7 @@ const UniversityPage = (props) => (
     </div>
 
     <div className="col-md-9">
+      <Match exactly pattern="/universidade" render={() => <Redirect to="/universidade/campus" />} />
       <Match pattern="/universidade/campus" component={Campus} />
       <Match pattern="/universidade/transporte" component={Transporte} />
       <Match pattern="/universidade/alimentacao" component={Alimentacao} />

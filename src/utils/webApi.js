@@ -11,6 +11,7 @@ export function fetchAuthors() {
             subjects = [subjects]
           }
         }
+        let area 
         return {
           id: author.eid,
           name: author['preferred-name']['given-name'],

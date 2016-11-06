@@ -69,7 +69,18 @@ class SearchPage extends React.Component {
     return (
       <div>
         <SearchBar updateValue={this.props.updateSearchTerm} />
-        {this.props.matchingAuthors.map(author => <SearchResult key={author.id} id={author.id} name={author.name} surname={author.surname} affiliation={author.affiliation} researchFocus={author.researchFocus} />)}
+        <div>
+          {this.props.matchingAuthors.map(author => (
+            <SearchResult
+              key={author.id}
+              id={author.id}
+              name={author.name}
+              surname={author.surname}
+              affiliation={author.affiliation}
+              researchFocus={author.researchFocus}
+            />
+          ))}
+        </div>
       </div>
     )
   }

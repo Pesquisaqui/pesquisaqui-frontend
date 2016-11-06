@@ -7,6 +7,7 @@ import HomePage from './HomePage'
 import SearchPage from './SearchPage'
 import ArticlePage from './ArticlePage'
 import UniversityPage from './UniversityPage'
+import MethodologyPage from './MethodologyPage'
 import 'bootstrap/dist/css/bootstrap-flex.css'
 import './App.css';
 import logo from './logo.png'
@@ -47,6 +48,7 @@ class App extends Component {
             <Match pattern="/busca" component={SearchPage} />
             <Match pattern="/usuarios/:userId" component={ProfilePage} />
             <Match pattern="/artigos/:id" component={ArticlePage} />
+            <Match pattern="/metodologia" component={MethodologyPage} />
             <Match pattern="/universidade" component={UniversityPage} />
           </div>
         </div>

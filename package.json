@@ -1,7 +1,6 @@
 {
   "name": "hackathon",
   "version": "0.1.0",
-  "homepage": "http://joaosoares.github.io/hackathon",
   "private": true,
   "devDependencies": {
     "react-scripts": "0.7.0"

@@ -1,0 +1,8 @@
+API KEY
+3cdc390c67171b8b78201d887aa83d61
+
+TODOS OS PAPERS DA USP
+http://api.elsevier.com/content/search/scopus?count=200&query=af-id%2860008088%29
+
+TODOS OS AUTORES DA USP
+http://api.elsevier.com/content/search/author?count=200&query=af-id%2860008088%29

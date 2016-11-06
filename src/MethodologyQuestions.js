@@ -102,6 +102,32 @@ class MethodologyQuestions extends React.Component {
           },
           answer: 'd',
           explanation: 'As citações a autor seguem o modelo: Último nome, Primeiro nome. Título. Local: Editor, Ano.'
+        },
+        {
+          answered: false,
+          choice: null,
+          question: 'No ramo da pesquisa documental, há padronização de modelos, ou conteúdos que não devam ser utilizados?',
+          options: {
+            a: 'Fontes classificadas como de "Segunda Mão", não são consideradas válidas para a pesquisa documental',
+            b: 'Relatórios de pesquisa e pareceres oficiais assinados por perito registrado são consideradas fontes de segunda mão',
+            c: 'Cartas, fotografias e gravuras são consideradas fontes de segunda mão, e portanto não devem se utilizadas como fontes confiáveis de dados para pesquisa documental',
+            d: 'Dados obtidos em fontes de primeira mão sempre são priorizados frente a dados de segunda mão.',
+          },
+          answer: 'b',
+          explanation: 'Relatórios e pareceres são resultado de uma análise de dados já existentes, não sendo em si conteúdo novo ou a analisar, portanto classificados como fontes de segunda mão. Entretanto, se mantém como fontes de dados possíveis de serem utilizadas para pesquisa, sem maiores prejuízos, desde que verificada sua autenticidade científica.'
+        },
+        {
+          answered: false,
+          choice: null,
+          question: 'Seria considerado um erro o entrevistador abrir margem para o entrevistado divagar livremente sobre o tema em pesquisa?',
+          options: {
+            a: 'Sim, pois sem um alinhamento central dos dados propostos, a entrevista irá tangenciar a proposta de pesquisa e terá pouca relevância prática.',
+            b: 'Será um erro, caso a pesquisa tenha objetivo quantitativo, e não qualitativo.',
+            c: 'Não se caracteriza como um erro, pois o entrevistador deve sempre manter a pequisa com o entrevistado, mesmo que seja identificado que este não pertence a seu público alvo',
+            d: 'Não se caracteriza como erro, principalmente em fases exploratórias, nas quais o dialogo aberto e mesmo informal pode levar ao aprofundamento no tema, ou mesmo revisão de hipóteses.',
+          },
+          answer: 'd',
+          explanation: 'O diálogo aberto e informal pode ser um importante aliado ao pesquisador, levando a uma maior profundidade no entendimento do tema através de pessoas com maior vivência com o objeto de pesquisa, podendo levar inclusive a revisão de premissas básicas do estudo.'
         }
       ]
     }

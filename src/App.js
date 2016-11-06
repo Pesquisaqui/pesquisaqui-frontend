@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import { BrowserRouter, Match, Link } from 'react-router'
 import { connect } from 'react-redux'
 import { fetchAuthors } from './actions/authorActions'
@@ -10,20 +9,15 @@ import ArticlePage from './ArticlePage'
 import UniversityPage from './UniversityPage'
 import 'bootstrap/dist/css/bootstrap-flex.css'
 import './App.css';
+import logo from './logo.png'
 
 const Header = ({activePath}) => (
   <nav className="navbar navbar-light bg-faded">
     <div className="container">
-      <span className="navbar-brand">
-        Pesquisaqui
-      </span>
+      <Link className="navbar-brand" to="/perfil">
+        <img src={logo} alt="Pesquisaqui" height="30" />
+      </Link>
       <ul className="nav navbar-nav">
-        <li className="nav-item">
-          <Link activeOnlyWhenExact activeClassName="active" className="nav-link" to="/">Início<span className="sr-only">(current)</span></Link>
-        </li>
-        <li className="nav-item">
-          <Link activeClassName="active" className="nav-link" to="/perfil">Meu perfil</Link>
-        </li>
         <li className="nav-item">
           <Link activeClassName="active" className="nav-link" to="/busca">Busca</Link>
         </li>

@@ -51,7 +51,7 @@ const Alimentacao = () => (
 
     <p>Alunos e Funcionários da USP têm direito a três refeições por dia nos Bandejões. Bandejão é o nome dado aos Restaurantes da USP. Esses são restaurantes subsidiados onde os alunos podem almoçar ou jantar por apenas R$1,90 e tomar café da manhã por R$0,60.</p>
 	  <p>O Bandejão oferece uma refeição balanceada e com opção vegetariana. São 4 restaurantes no total: Central, das Químicas, da Física e da Prefeitura (PUSP-C). Todos eles são acessados pelo Cartão USP, mas para ter saldo no cartão, deve ser colocado no caixa do COSEAS próximo ao Bandejão Central.</p>
-	  <p>Os cardápios podem ser acessados pelo website do COSEAS-USP <a href="http://www.usp.br/coseas/COSEASHP/COSEAS2010_cardapio.html">aqui</a>.</p>
+	  <p>Os cardápios podem ser acessados pelo website do COSEAS-USP <a target="_blank" href="http://www.usp.br/coseas/COSEASHP/COSEAS2010_cardapio.html">aqui</a>.</p>
 		<p>Além dos Restaurantes da USP (Bandejões), há uma grande quantidade de restaurantes independentes no Campus.</p>
 
   </div>
@@ -65,25 +65,25 @@ const Aplicativos = () => (
     
     <h5>Aplicativos da Universidade</h5>
     <dl className="row">
-      <dd className="col-xs-2"><img src={cardapiosusp} className="img-fluid"/></dd>
+      <dd className="col-xs-2"><a target="_blank" href="https://play.google.com/store/apps/details?id=br.usp.cardapio_usp&hl=pt"><img src={cardapiosusp} className="img-fluid"/></a></dd>
       <dt className="col-xs-4 flex-xs-middle" > Cardapios USP</dt>
       
-      <dd className="col-xs-2"><img src={campususp} className="img-fluid"/></dd>
+      <dd className="col-xs-2"><a target="_blank" href="https://play.google.com/store/apps/details?id=br.usp.campus_usp&hl=pt"><img src={campususp} className="img-fluid"/></a></dd>
       <dt className="col-xs-4 flex-xs-middle"> Campus USP</dt>
       
-      <dd className="col-xs-2"><img src={jornaldausp} className="img-fluid"/></dd>
+      <dd className="col-xs-2"><a target="_blank" href="https://play.google.com/store/apps/details?id=br.usp.jornal_da_usp&hl=pt"><img src={jornaldausp} className="img-fluid"/></a></dd>
       <dt className="col-xs-4 flex-xs-middle"> Jornal da USP</dt>
       
-      <dd className="col-xs-2"><img src={bibliotecasusp} className="img-fluid"/></dd>
+      <dd className="col-xs-2"><a target="_blank" href="https://play.google.com/store/apps/details?id=br.usp.bibliotecas_usp&hl=pt"><img src={bibliotecasusp} className="img-fluid"/></a></dd>
       <dt className="col-xs-4 flex-xs-middle"> Bibliotecas USP</dt>
     </dl>
 
     <h5>Outros</h5>
     <dl className="row">
-      <dd className="col-xs-2"><img src={uspdouglas} className="img-fluid"/></dd>
+      <dd className="col-xs-2"><a target="_blank" href="https://play.google.com/store/apps/details?id=com.iacovelli.usp&hl=pt"><img src={uspdouglas} className="img-fluid"/></a></dd>
       <dd className="col-xs-4 flex-xs-middle" > <b>USP</b> - Douglas Iacovelli</dd>
 
-      <dd className="col-xs-2"><img src={bandex} className="img-fluid"/></dd>
+      <dd className="col-xs-2"><a target="_blank" href="https://play.google.com/store/apps/details?id=br.usp.ime.bandex&hl=pt"><img src={bandex} className="img-fluid"/></a></dd>
       <dd className="col-xs-4 flex-xs-middle" > <b>Bandex Agora</b> - Wagner Ferreira Alves</dd>
     </dl>
 
@@ -95,10 +95,10 @@ const UniversityPage = (props) => (
   <div className="row pt-1">
     {/* MENU DA UNIVERSIDADE */}
     <div className="col-md-3">
-      <h5>Páginas principais</h5>
+      <h5><b>Páginas Principais</b></h5>
       <ul className="nav nav-stacked nav-pills">
         <li className="nav-item">
-          <Link className="nav-link" activeClassName="active" to="/universidade/campus">O campus</Link>
+          <Link className="nav-link" activeClassName="active" to="/universidade/campus">O Campus</Link>
         </li>
         <li className="nav-item">
           <Link className="nav-link" activeClassName="active" to="/universidade/transporte">Transporte</Link>

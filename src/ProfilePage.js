@@ -26,11 +26,21 @@ const ProfilePage = ({ author, params }) => (
 )
 
 function mapStateToProps(state, ownProps) {
-  const id = ownProps.params.userId
+  let id
+  try {
+    id = ownProps.params.userId
+    if (id === undefined) {
+      throw new Error('undefined id, trying to get CurrentUser from state')
+    }
+  } catch (error) {
+    id = selectors.getCurrentUser(state)
+  }
+  const currentUser = selectors.getCurrentUser(state)
+  const ownProfile = id === currentUser
   console.log("id", id)
   const author = selectors.getAuthor(state, id)
   console.log("author", author)
-  return { author }
+  return { author, ownProfile }
 }
 
 export default connect(mapStateToProps)(ProfilePage)

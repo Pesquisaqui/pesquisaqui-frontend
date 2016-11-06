@@ -18,11 +18,7 @@
   padding: 20px 0;
 }
 
-.App-intro {
-  font-size: large;
-}
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.card-inverse .card-link, .card-inverse .card-text, .card-inverse .card-subtitle, .card-inverse .card-blockquote .blockquote-footer {
+    color: rgba(255, 255, 255, 1);
 }

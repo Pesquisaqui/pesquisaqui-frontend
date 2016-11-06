@@ -34,7 +34,6 @@ const ProfilePage = ({ author, params }) => (
           {author.researchFocus.map(foc => <li>{SearchTypes[foc['@abbrev']]}</li>)}
         </ul>
 
-
       </div>
     </div>
   </div>

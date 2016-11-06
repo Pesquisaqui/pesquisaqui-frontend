@@ -15,10 +15,13 @@ import logo from './logo.png'
 const Header = ({activePath}) => (
   <nav className="navbar navbar-light bg-faded">
     <div className="container">
-      <Link className="navbar-brand" to="/perfil">
-        <img src={logo} alt="Pesquisaqui" height="30" />
+      <Link className="navbar-brand" to="/">
+        <img src={logo} alt="Pesquisaqui" height="30" mx-auto />
       </Link>
       <ul className="nav navbar-nav">
+        <li className="nav-item">
+          <Link activeClassName="active" className="nav-link" to="/perfil">Meu Perfil</Link>
+        </li>
         <li className="nav-item">
           <Link activeClassName="active" className="nav-link" to="/busca">Busca</Link>
         </li>

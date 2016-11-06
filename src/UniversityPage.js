@@ -25,7 +25,10 @@ const Campus = () => (
     <dd className="col-sm-9">Av. Corifeu de Azevedo Marques</dd>
    </dl>
   <p> Essas são entradas para carros e pedestres. Além delas, há diversas entradas exclusivas para pedestres como pode se ver no mapa.</p>
-
+  <div className="btn-group btn-group-sm float-sm-right">
+    <button type="button" className="btn btn-primary">Editar</button>
+    <button type="button" className="btn btn-danger">Relatar um problema</button>
+  </div>
   </div>
 ) 
 
@@ -36,6 +39,10 @@ const Transporte = () => (
     <p>A USP também possui uma entrada prática para aqueles que usam a Linha 9 - Esmeralda da CPTM. A entrada apelidada de PTrem desemboca em um ponto de ônibus por onde os Circulares passam.</p>
 		<p>O Ponto de Táxi se localiza ao lado da Praça dos Bancos na Av. Professor Lúcio Martins Rodrigues.</p>
 		<p>Todos os alunos e funcionários da USP recebem um passe de Ônibus (BUSP) que torna gratuita a utilização dos Circulares.</p>
+    <div className="btn-group btn-group-sm float-sm-right">
+      <button type="button" className="btn btn-primary">Editar</button>
+      <button type="button" className="btn btn-danger">Relatar um problema</button>
+    </div>
 
   </div>
 )
@@ -46,6 +53,10 @@ const Alimentacao = () => (
 	  <p>O Bandejão oferece uma refeição balanceada e com opção vegetariana. São 4 restaurantes no total: Central, das Químicas, da Física e da Prefeitura (PUSP-C). Todos eles são acessados pelo Cartão USP, mas para ter saldo no cartão, deve ser colocado no caixa do COSEAS próximo ao Bandejão Central.</p>
 	  <p>Os cardápios podem ser acessados pelo website do COSEAS-USP <a target="_blank" href="http://www.usp.br/coseas/COSEASHP/COSEAS2010_cardapio.html">aqui</a>.</p>
 		<p>Além dos Restaurantes da USP (Bandejões), há uma grande quantidade de restaurantes independentes no Campus.</p>
+    <div className="btn-group btn-group-sm float-sm-right">
+      <button type="button" className="btn btn-primary">Editar</button>
+      <button type="button" className="btn btn-danger">Relatar um problema</button>
+    </div>
 
   </div>
 )
@@ -77,6 +88,10 @@ const Aplicativos = () => (
       <dd className="col-xs-2"><a target="_blank" href="https://play.google.com/store/apps/details?id=br.usp.ime.bandex&hl=pt"><img src={bandex} className="img-fluid"/></a></dd>
       <dd className="col-xs-4 flex-xs-middle" > <b>Bandex Agora</b> - Wagner Ferreira Alves</dd>
     </dl>
+    <div className="btn-group btn-group-sm float-sm-right">
+      <button type="button" className="btn btn-primary">Editar</button>
+      <button type="button" className="btn btn-danger">Relatar um problema</button>
+    </div>
 
 
    </div>

@@ -15,10 +15,10 @@ export function getAuthors(state) {
   return state
 }
 
-export function getAuthor(state, eid) {
-  try {
-    return state.filter(s => s.eid ==- eid)[0]
-  } catch (error) {
-    return undefined
+export function getAuthor(state, id) {
+  const match = state.find(s => s.id === id)
+  if (match === undefined) {
+    return {}
   }
+  return match
 }

@@ -14,8 +14,8 @@ export function getAuthors(state) {
   return fromAuthors.getAuthors(state.authors)
 }
 
-export function getAuthor(state, eid) {
-  return fromAuthors.getAuthor(state.authors, eid)
+export function getAuthor(state, id) {
+  return fromAuthors.getAuthor(state.authors, id)
 }
 
 export function getSearchTerm(state) {

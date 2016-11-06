@@ -2,16 +2,16 @@ import React from 'react'
 import { connect } from 'react-redux'
 import * as selectors from './reducers'
 
-const ProfilePage = ({author, params}) => (
+const ProfilePage = ({ author, params }) => (
   <div>
     <div className="row App-header">
       <div className="col-xs-12 col-sm-2 pull-md-right">
         <img src="http://placehold.it/100x100" alt="..." className="img-thumbnail" />
       </div>
       <div className="col-xs-12 col-sm-10 flex-xs-bottom">
-        <h2 className="mb-0">{author.name}</h2>
+        <h2 className="mb-0">{author.name} {author.surname}</h2>
         <p className="my-0">{author.affiliation}</p>
-        <p className="my-0">{author.area}</p>
+        <p className="my-0"></p>
       </div>
     </div>
     <div className="row Profile-field">
@@ -29,6 +29,7 @@ function mapStateToProps(state, ownProps) {
   const id = ownProps.params.userId
   console.log("id", id)
   const author = selectors.getAuthor(state, id)
+  console.log("author", author)
   return { author }
 }
 

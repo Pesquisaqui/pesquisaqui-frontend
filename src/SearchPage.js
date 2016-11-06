@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { remove } from 'diacritics'
 import includes from 'lodash/includes'
 import some from 'lodash/some'
+import trim from 'lodash/trim'
 import * as selectors from './reducers'
 import { updateSearchTerm } from './actions/searchActions'
 
@@ -14,7 +15,7 @@ const SearchTypes = {
   BIOC: 'Bioquímica, Genética e Biologia Molecular',
   BUSI: 'Negócios, Administração e Contabilidade',
   CENG: 'Engenharia Química',
-  CHEM: 'Quuímica',
+  CHEM: 'Química',
   COMP: 'Ciência da Computação',
   DECI: 'Ciências da Decisão',
   DENT: 'Odontologia',
@@ -68,20 +69,25 @@ class SearchPage extends React.Component {
     return (
       <div>
         <SearchBar updateValue={this.props.updateSearchTerm} />
-        {this.props.authors.map(author => <SearchResult key={author.id} id={author.id} name={author.name} surname={author.surname} affiliation={author.affiliation} researchFocus={author.researchFocus} />)}
+        {this.props.matchingAuthors.map(author => <SearchResult key={author.id} id={author.id} name={author.name} surname={author.surname} affiliation={author.affiliation} researchFocus={author.researchFocus} />)}
       </div>
     )
   }
 }
 
+function selectMatchingAuthors(searchTerm, author) {
+  if (trim(searchTerm) === "") {
+    return true
+  } 
+  const researchFoci = author.researchFocus.map(i => remove(SearchTypes[i['@abbrev']]).toLowerCase())
+  const lowerSearchTerm = remove(searchTerm).toLowerCase()
+  return some(researchFoci, focusName => includes(focusName, searchTerm))
+}
+
 function mapStateToProps(state, ownProps) {
   const searchTerm = selectors.getSearchTerm(state)
   const authors = selectors.getAuthors(state)
-  const matchingAuthors = authors.filter(author => (
-    some(author.researchFocus.map(t => SearchTypes[t['@abbrev']]), (researchFocus => (
-      includes(researchFocus, searchTerm)
-    )))
-  ))
+  const matchingAuthors = authors.filter(author => selectMatchingAuthors(searchTerm, author))
   return {
     authors,
     matchingAuthors,

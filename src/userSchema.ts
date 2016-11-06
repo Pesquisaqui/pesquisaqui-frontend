@@ -1,16 +1,18 @@
 //@flow
 
+export type Area = ""
+
 export type User = {
   id: string,
   name: string,
   surname: string,
   affiliation: string,
-  area,
+  area: string,
   subarea,
   avatar,
   email,
   phone,
-  researchInterests: [],
+  researchInterests: Array<string>,
   hasRegistered,
   canHelp,
   methodologyTypes: [],

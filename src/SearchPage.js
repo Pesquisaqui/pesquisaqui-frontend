@@ -14,7 +14,7 @@ const SearchBar = (props) => (
 
 const SearchResult = (props) => (
   <div className="card card-block">
-    <h4 className="card-title">{`${props.name['given-name']} ${props.name['surname']}`}</h4>
+    <h4 className="card-title">{`${props.name} ${props.surname}`}</h4>
     <p className="card-text">Resultado</p>
     <a href="#" className="card-link">Card link</a>
     <a href="#" className="card-link">Another link</a>
@@ -24,7 +24,7 @@ const SearchResult = (props) => (
 const SearchPage = (props) => (
   <div>
     <SearchBar />
-    {props.authors.map(author => <SearchResult key={author.eid} name={author["preferred-name"]} />)}
+    {props.authors.map(author => <SearchResult key={author.id} name={author.name} surname={author.surname} />)}
     
   </div>
 )

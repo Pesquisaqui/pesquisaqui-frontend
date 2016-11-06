@@ -7,6 +7,7 @@ import ProfilePage from './ProfilePage'
 import HomePage from './HomePage'
 import SearchPage from './SearchPage'
 import ArticlePage from './ArticlePage'
+import UniversityPage from './UniversityPage'
 import 'bootstrap/dist/css/bootstrap-flex.css'
 import './App.css';
 
@@ -21,13 +22,16 @@ const Header = ({activePath}) => (
           <Link activeOnlyWhenExact activeClassName="active" className="nav-link" to="/">Início<span className="sr-only">(current)</span></Link>
         </li>
         <li className="nav-item">
-          <Link activeOnlyWhenExact activeClassName="active" className="nav-link" to="/perfil">Meu perfil</Link>
+          <Link activeClassName="active" className="nav-link" to="/perfil">Meu perfil</Link>
         </li>
         <li className="nav-item">
-          <Link activeOnlyWhenExact activeClassName="active" className="nav-link" to="/busca">Busca</Link>
+          <Link activeClassName="active" className="nav-link" to="/busca">Busca</Link>
         </li>
         <li className="nav-item">
-          <Link activeOnlyWhenExact activeClassName="active" className="nav-link" to="/metodologia">Metodologia</Link>
+          <Link activeClassName="active" className="nav-link" to="/metodologia">Metodologia</Link>
+        </li>
+        <li className="nav-item">
+          <Link activeClassName="active" className="nav-link" to="/universidade">Universidade</Link>
         </li>
       </ul>
     </div>
@@ -49,6 +53,7 @@ class App extends Component {
             <Match pattern="/busca" component={SearchPage} />
             <Match pattern="/usuarios/:id" component={ProfilePage} />
             <Match pattern="/artigos/:id" component={ArticlePage} />
+            <Match pattern="/universidade" component={UniversityPage} />
           </div>
         </div>
       </BrowserRouter>

@@ -1815,6 +1815,10 @@ detect-port@1.0.1:
   dependencies:
     commander "~2.8.1"
 
+diacritics:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/diacritics/-/diacritics-1.2.3.tgz#8f34f28e5c44a05cb496078ec2885445d7c40b42"
+
 diff@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/diff/-/diff-3.0.1.tgz#a52d90cc08956994be00877bff97110062582c35"

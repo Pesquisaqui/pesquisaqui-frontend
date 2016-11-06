@@ -49,9 +49,9 @@ class App extends Component {
           <Header />
           <div className="container">
             <Match exactly pattern="/" component={HomePage} />
-            <Match pattern="/perfil" component={ProfilePage} />
+            <Match exactly pattern="/perfil" component={ProfilePage} />
             <Match pattern="/busca" component={SearchPage} />
-            <Match pattern="/usuarios/:id" component={ProfilePage} />
+            <Match pattern="/usuarios/:userId" component={ProfilePage} />
             <Match pattern="/artigos/:id" component={ArticlePage} />
             <Match pattern="/universidade" component={UniversityPage} />
           </div>

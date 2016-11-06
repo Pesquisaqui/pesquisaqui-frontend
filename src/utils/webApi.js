@@ -5,7 +5,12 @@ export function fetchAuthors() {
     try {
       const responseObject = require('../api/authors').default
       const response = responseObject["search-results"].entry.map(author => {
-        const subjects = author['subject-area']
+        let subjects = author['subject-area']
+        if (subjects === undefined) {
+          subjects = []
+        } else if (subjects.length === undefined) {
+          subjects = [subjects]
+        }
         return {
         id: author.eid,
         name: author['preferred-name']['given-name'],
@@ -16,7 +21,7 @@ export function fetchAuthors() {
         avatar: null,
         email: null,
         phone: null,
-        researchFocus: subjects ? subjects : null,
+        researchFocus: subjects ? subjects : [],
         hasRegistered: false,
         canHelp: false,
         methodologyTypes: [],

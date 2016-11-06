@@ -8,6 +8,7 @@
   "dependencies": {
     "auth0-lock": "^10.5.1",
     "bootstrap": "4.0.0-alpha.5",
+    "diacritics": "^1.2.3",
     "firebase": "^3.5.3",
     "flow-bin": "^0.34.0",
     "json-server": "^0.8.23",

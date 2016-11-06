@@ -12,7 +12,7 @@ export type User = {
   avatar,
   email,
   phone,
-  researchInterests: Array<string>,
+  researchFocus: Array<string>,
   hasRegistered,
   canHelp,
   methodologyTypes: [],

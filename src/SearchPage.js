@@ -15,7 +15,7 @@ const SearchBar = (props) => (
 const SearchResult = (props) => (
   <div className="card card-block">
     <h4 className="card-title">{`${props.name} ${props.surname}`}</h4>
-    <p className="card-text">Resultado</p>
+    <p className="card-text">{props.affiliation}</p>
     <a href="#" className="card-link">Card link</a>
     <a href="#" className="card-link">Another link</a>
   </div>

@@ -17,7 +17,19 @@ const registered = [
     canHelp: true,
     methodologyTypes: [],
     contacts: ['9-s2.0-7003917487', '9-s2.0-7005232902'],
-    points: 400
+    points: 400,
+    documents: [
+      {
+        title: '3D focalization microfluidic device built with LTCC technology for nanoparticle generation using nanoprecipitation route',
+        journal: 'Journal of Ceramic Science and Technology',
+        year: 2015
+      },
+      {
+        title: 'Molds and resists studies for nanoimprint lithography of electrodes in low-voltage polymer thin-film transistors',
+        journal: 'Journal of Electronic Materials',
+        year: 2014
+      }
+    ]
   },
   // VITOR
   {
@@ -30,7 +42,8 @@ const registered = [
     canHelp: true,
     methodologyTypes: [],
     contacts: ['9-s2.0-6603373732', '9-s2.0-7005232902'],
-    points: 230
+    points: 230,
+    documents: []
   },
   // PIQUEIRA
   {
@@ -43,7 +56,12 @@ const registered = [
     canHelp: false,
     methodologyTypes: [],
     contacts: ['9-s2.0-7005232902'],
-    points: 0
+    points: 0,
+    documents: [{
+      title: 'A comparison of LMC and SDL complexity measures on binomial distributions',
+      journal: 'Physica A: Statistical Mechanics and its Applications',
+      year: 2016
+    }]
   },
   // MARTINO
   {
@@ -56,7 +74,14 @@ const registered = [
     canHelp: false,
     methodologyTypes: [],
     contacts: ['9-s2.0-6602715200', '9-s2.0-7003917487', '9-s2.0-6603373732'],
-    points: 0
+    points: 0,
+    documents: [
+      {
+        title: 'Low-Frequency Noise Assessment of Different Ge pFinFET STI Processes',
+        journal: 'IEEE Transactions on Electron Devices',
+        year: 2016
+      }
+    ]
   }
 ]
 
@@ -95,7 +120,7 @@ export function fetchAuthors() {
           methodologyTypes: [],
           contacts: isRegistered ? rAuthor.contacts : [],
           points: isRegistered ? rAuthor.points : 0,
-          documents: author.documents ? author.documents : []
+          documents: isRegistered ? rAuthor.documents : []
         }
       })
       fulfill(response)

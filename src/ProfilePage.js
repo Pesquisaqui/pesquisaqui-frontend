@@ -1,12 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { SearchTypes } from './SearchPage'
 import * as selectors from './reducers'
 
 const ProfilePage = ({ author, params }) => (
   <div>
     <div className="row App-header">
       <div className="col-xs-12 col-sm-2 pull-md-right">
-        <img src="http://placehold.it/100x100" alt="..." className="img-thumbnail" />
+        <img src={author.avatar} alt="..." className="img-thumbnail" />
       </div>
       <div className="col-xs-12 col-sm-10 flex-xs-bottom">
         <h2 className="mb-0">{author.name} {author.surname}</h2>
@@ -16,10 +17,24 @@ const ProfilePage = ({ author, params }) => (
     </div>
     <div className="row Profile-field">
       <div className="col-xs-12 col-sm-10 offset-sm-2">
-        <h4>Contato</h4>
-        <h4>Interesses de pesquisa</h4>
-        
-        <h4>Sou expert em</h4>
+        {(author.email || author.phone ? (
+          <div>
+            <h5>Contato</h5>
+            <dl>
+              <dt>E-mail</dt>
+              <dd><a href={`mailto:${author.email}`}>{author.email}</a></dd>
+              <dt>Telefone</dt>
+              <dd>{author.phone}</dd>
+            </dl>
+          </div>
+        ) : null)}
+
+        <h5>Interesses de pesquisa</h5>
+        <ul class="list-group">
+          {author.researchFocus.map(foc => <li>{SearchTypes[foc['@abbrev']]}</li>)}
+        </ul>
+
+
       </div>
     </div>
   </div>

@@ -5,7 +5,7 @@ const StartView = ({ onStart }) => {
   return (
     <div className="card">
       <div className="card-block">
-        <h4>Perguntas de metodologia</h4>
+        <h4>Perguntas sobre plágio</h4>
         <p className="card-text">As perguntas a seguir tem como objetivo medir seu conhecimento de metodologia. Responda tudo certo para provar que você está bem informado.</p>
         <button onClick={onStart} className="btn btn-primary">Iniciar</button>
       </div>
@@ -91,7 +91,7 @@ const QuestionView = ({ questions, number, onAnswer, onNext }) => {
             </div>
           </div>
         )}
-
+        
     </div>
   )
 }

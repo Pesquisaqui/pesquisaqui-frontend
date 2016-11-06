@@ -30,22 +30,23 @@ export const MethodologyPage = (props) => (
     {/* MENU DA UNIVERSIDADE */}
     <div className="col-md-3">
       <ul className="nav nav-stacked nav-pills">
+       <li className="nav-item">
+          <Link className="nav-link" activeOnlyWhenExact activeClassName="active" to="/metodologia">Faça os nosso quizzes</Link>
+        </li>
         <li className="nav-item">
-          <Link className="nav-link" activeOnlyWhenExact activeClassName="active" to="/metodologia">Início</Link>
+          <Link className="nav-link"  activeClassName="active" to="/metodologia/info">Metodologia</Link>
         </li>
         <li className="nav-item">
           <Link className="nav-link" activeClassName="active" to="/metodologia/buscar">Quem poderia te ajudar?</Link>
         </li>
-        <li className="nav-item">
-          <Link className="nav-link" activeClassName="active" to="/metodologia/perguntas">Faça o nosso quiz</Link>
-        </li>
+
       </ul>
     </div>
 
     <div className="col-md-9">
-      <Match exactly pattern="/metodologia" component={Metodologia} />
+      <Match exactly pattern="/metodologia" component={MethodologyQuestions} />
       <Match pattern="/metodologia/buscar" component={MetodologiaBuscar} />
-      <Match pattern="/metodologia/perguntas" component={MethodologyQuestions} />
+      <Match pattern="/metodologia/info" component={Metodologia} />
     </div>
 
   </div>

@@ -44,6 +44,74 @@ export default {
       // FERNANDO AUIL
       {
         "@_fa": "true",
+        "documents": [
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@href": "http://api.elsevier.com/content/author/author_id/6507934837",
+                "@ref": "self"
+              },
+              {
+                "@_fa": "true",
+                "@href": "http://api.elsevier.com/content/search/author?query=au-id%286507934837%29",
+                "@ref": "search"
+              },
+              {
+                "@_fa": "true",
+                "@href": "https://www.scopus.com/author/citedby.uri?partnerID=HzOxMe3b&citedAuthorId=6507934837&origin=inward",
+                "@ref": "scopus-citedby"
+              },
+              {
+                "@_fa": "true",
+                "@href": "https://www.scopus.com/authid/detail.uri?partnerID=HzOxMe3b&authorId=6507934837&origin=inward",
+                "@ref": "scopus-author"
+              }
+            ],
+            "prism:url": "http://api.elsevier.com/content/author/author_id/6507934837",
+            "dc:identifier": "AUTHOR_ID:6507934837",
+            "eid": "9-s2.0-6507934837",
+            "preferred-name": {
+              "surname": "Auil",
+              "given-name": "Fernando",
+              "initials": "F."
+            },
+            "name-variant": [
+              {
+                "@_fa": "true",
+                "surname": "Auil",
+                "given-name": null,
+                "initials": "F."
+              }
+            ],
+            "document-count": "5",
+            "subject-area": [
+              {
+                "@abbrev": "PHYS",
+                "@frequency": "6",
+                "$": "Physics and Astronomy (all)"
+              },
+              {
+                "@abbrev": "NURS",
+                "@frequency": "1",
+                "$": "Nursing (all)"
+              },
+              {
+                "@abbrev": "MATH",
+                "@frequency": "2",
+                "$": "Mathematics (all)"
+              }
+            ],
+            "affiliation-current": {
+              "affiliation-url": "http://api.elsevier.com/content/affiliation/affiliation_id/60008088",
+              "affiliation-id": "60008088",
+              "affiliation-name": "Universidade de Sao Paulo - USP",
+              "affiliation-city": "Sao Paulo",
+              "affiliation-country": "Brazil"
+            }
+          }
+        ],
         "link": [
           {
             "@_fa": "true",
@@ -111,6 +179,86 @@ export default {
       // SEABRA
       {
         "@_fa": "true",
+        "documents": [
+          {
+            "@_fa": "true",
+            "link": [
+              {
+                "@_fa": "true",
+                "@href": "http://api.elsevier.com/content/author/author_id/6603373732",
+                "@ref": "self"
+              },
+              {
+                "@_fa": "true",
+                "@href": "http://api.elsevier.com/content/search/author?query=au-id%286603373732%29",
+                "@ref": "search"
+              },
+              {
+                "@_fa": "true",
+                "@href": "https://www.scopus.com/author/citedby.uri?partnerID=HzOxMe3b&citedAuthorId=6603373732&origin=inward",
+                "@ref": "scopus-citedby"
+              },
+              {
+                "@_fa": "true",
+                "@href": "https://www.scopus.com/authid/detail.uri?partnerID=HzOxMe3b&authorId=6603373732&origin=inward",
+                "@ref": "scopus-author"
+              }
+            ],
+            "prism:url": "http://api.elsevier.com/content/author/author_id/6603373732",
+            "dc:identifier": "AUTHOR_ID:6603373732",
+            "eid": "9-s2.0-6603373732",
+            "preferred-name": {
+              "surname": "Seabra",
+              "given-name": "Antônio Carlos",
+              "initials": "A.C."
+            },
+            "name-variant": [
+              {
+                "@_fa": "true",
+                "surname": "Seabra",
+                "given-name": "A. C.",
+                "initials": "A.C."
+              },
+              {
+                "@_fa": "true",
+                "surname": "Seabra",
+                "given-name": "Antonio Carlos",
+                "initials": "A.C."
+              },
+              {
+                "@_fa": "true",
+                "surname": "Seabra",
+                "given-name": "A.",
+                "initials": "A."
+              }
+            ],
+            "document-count": "42",
+            "subject-area": [
+              {
+                "@abbrev": "MATE",
+                "@frequency": "20",
+                "$": "Materials Science (all)"
+              },
+              {
+                "@abbrev": "PHYS",
+                "@frequency": "25",
+                "$": "Physics and Astronomy (all)"
+              },
+              {
+                "@abbrev": "COMP",
+                "@frequency": "10",
+                "$": "Computer Science (all)"
+              }
+            ],
+            "affiliation-current": {
+              "affiliation-url": "http://api.elsevier.com/content/affiliation/affiliation_id/60008088",
+              "affiliation-id": "60008088",
+              "affiliation-name": "Universidade de Sao Paulo - USP",
+              "affiliation-city": "Sao Paulo",
+              "affiliation-country": "Brazil"
+            }
+          }
+        ],
         "link": [
           {
             "@_fa": "true",

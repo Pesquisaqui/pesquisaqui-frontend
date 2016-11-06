@@ -1,11 +1,16 @@
 import includes from 'lodash/includes'
+import avatar from '../avatar.png'
+import martino from '../martino.jpg'
+import seabra from '../seabra.png'
+import vitor from '../vitor.jpg'
+import piqueira from '../piqueira.jpg'
 
 const registered = [
   // SEABRA
   {
     id: '9-s2.0-6603373732',
     subarea: 'Departamento de Engenharia de Sistemas Eletrônicos (PSI)',
-    avatar: null,
+    avatar: seabra,
     email: 'acseabra@lsi.usp.br',
     phone: '(11)3091-5660',
     hasRegistered: true,
@@ -18,7 +23,7 @@ const registered = [
   {
     id: '9-s2.0-7003917487',
     subarea: 'Departamento de Engenharia de Sistemas Eletrônicos (PSI)',
-    avatar: null,
+    avatar: vitor,
     email: 'vitor@lps.usp.br',
     phone: '(11)3091-5606',
     hasRegistered: true,
@@ -31,7 +36,7 @@ const registered = [
   {
     id: '9-s2.0-6602715200',
     subarea: 'Departamento de Engenharia de Telecomunicações e Controle (PTC)',
-    avatar: null,
+    avatar: piqueira,
     email: null,
     phone: null,
     hasRegistered: false,
@@ -44,8 +49,8 @@ const registered = [
   {
     id: '9-s2.0-7005232902',
     subarea: 'Departamento de Engenharia de Sistemas Eletrônicos (PSI)',
-    avatar: null,
-    email: null,
+    avatar: martino,
+    email: 'martino@lsi.usp.br',
     phone: null,
     hasRegistered: false,
     canHelp: false,
@@ -81,15 +86,16 @@ export function fetchAuthors() {
           affiliation: author['affiliation-current']['affiliation-name'],
           area: subjects ? subjects.reduce((prev, cur) => parseInt(cur['@frequency']) > parseInt(prev['@frequency']) ? cur : prev) : null,
           subarea: isRegistered ? rAuthor.subarea : null,
-          avatar: null,
+          avatar: isRegistered ? rAuthor.avatar : avatar,
           email: isRegistered ? rAuthor.email : null,
-          phone: null,
+          phone: isRegistered ? rAuthor.phone : null,
           researchFocus: subjects ? subjects : [],
-          hasRegistered: false,
-          canHelp: false,
+          hasRegistered: isRegistered ? true : false,
+          canHelp: isRegistered ? rAuthor.canHelp : false,
           methodologyTypes: [],
-          contacts: [],
-          points: 0
+          contacts: isRegistered ? rAuthor.contacts : [],
+          points: isRegistered ? rAuthor.points : 0,
+          documents: author.documents ? author.documents : []
         }
       })
       fulfill(response)
@@ -97,8 +103,4 @@ export function fetchAuthors() {
       reject(error)
     }
   })
-}
-
-export function test() {
-  return "hello world"
 }

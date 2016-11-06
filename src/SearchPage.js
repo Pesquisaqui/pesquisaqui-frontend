@@ -9,7 +9,7 @@ import * as selectors from './reducers'
 import { updateSearchTerm } from './actions/searchActions'
 
 
-const SearchTypes = {
+export const SearchTypes = {
   AGRI: 'Ciências Biológicas e Agrícolas',
   ARTS: 'Arte e Humanidades',
   BIOC: 'Bioquímica, Genética e Biologia Molecular',

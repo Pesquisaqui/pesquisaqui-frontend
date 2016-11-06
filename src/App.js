@@ -16,7 +16,7 @@ const Header = ({activePath}) => (
   <nav className="navbar navbar-light bg-faded">
     <div className="container">
       <Link className="navbar-brand" to="/">
-        <img src={logo} alt="Pesquisaqui" height="30" mx-auto />
+        <img src={logo} alt="Pesquisaqui" height="30" />
       </Link>
       <ul className="nav navbar-nav">
         <li className="nav-item">
@@ -26,7 +26,7 @@ const Header = ({activePath}) => (
           <Link activeClassName="active" className="nav-link" to="/busca">Busca</Link>
         </li>
         <li className="nav-item">
-          <Link activeClassName="active" className="nav-link" to="/metodologia">Metodologia</Link>
+          <Link activeClassName="active" className="nav-link" to="/metodologia">Pesquisa</Link>
         </li>
         <li className="nav-item">
           <Link activeClassName="active" className="nav-link" to="/universidade">Universidade</Link>
